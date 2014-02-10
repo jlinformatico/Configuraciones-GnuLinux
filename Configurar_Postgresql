@@ -1,0 +1,74 @@
+Puerto: 5432
+
+- Gestor de base de datos PostgreSQL
+- Cliente pgAdminIII o phppgadmin
+
+PostgreSQL, es un gestor de base de datos relacional, la primera versión del código fue público el 1 de agosto de 1996, liberado bajo la licencia BSD y desarrollado por “PostgreSQL Global Development Group”.
+
+1. Instalar PostgreSQL de la versión 9.1
+-----------------------------------------
+	aptitude install postgresql-9.3
+	o
+	sudo apt-get install postgresql-server
+
+*PostgreSQL por defecto, creará una carpeta de configuración en: /etc/postgresql/9.1/main/
+Y creará un espacio de datos en: /var/lib/postgresql/9.1/main/
+
+-
+vi /etc/apt/sources.list
+
+2. Configurar
+-------------
+- Lo primero que se tiene que hacer es cambiarle la contraseña al usuario “postgres” que se crea luego de haber instalado el paquete:
+
+	sudo passwd postgres
+*introducir contraseña
+
+- Ingresar a la consola de administracion postgresql para cambiar contraseña del usuario "postgres"
+	su postgres
+
+postgres@nombre_maquina:/directorio$ psql postgres
+postgres=# ALTER USER postgres PASSWORD 'CONTRASENA_DEL_USUARIO';
+
+para salir de la sesion:
+	\q
+	exit
+
+- Con estas configuraciones hechas debe reiniciar el servicio del servidor PostgreSQL, con el siguiente comando:
+
+# service postgresql restart
+
+4. Entorno visual: pgadmin3
+----------------------------
+	aptitude install pgadmin3
+
+
+- Instalar phpPgAdmin
+---------------------
+http://tubasededatoslibre.org/site/phppgadmin-debian-wheezy/
+https://www.digitalocean.com/community/articles/how-to-install-and-use-phppgadmin-on-ubuntu-12-04
+
+#sudo aptitude install phppgadmin
+o
+sudo apt-get install postgresql postgresql-contrib phppgadmin
+
+- Luego para hacerlo disponible:
+#vi /etc/apache2/conf.d/phppgadmin
+
+- Buscar en el archivo #allow from all y descomentar, quedando así:
+	allow from all
+
+- Reiniciar apache
+# /etc/init.d/apache2 restart
+
+- Acceder vía url a tu instalación de phpPgAdmin, en http://localhost/phppgadmin ó http://127.0.0.1/phppgadmin
+
+
+Fuente:
+-------
+- http://phenobarbital.wordpress.com/2012/07/24/postgresql-una-instalacion-de-postgresql-basica-pero-mejor/
+- http://lcaballero.wordpress.com/2013/03/01/instalacion-de-postgresql-en-debian-gnulinux-wheezy/
+- http://tubasededatoslibre.org/site/tecnicos-de-la-apn-se-especializan-en-aplicacion-de-herramientas-en-postgresql/
+
+-http://www.ajpdsoft.com/modules.php?name=News&file=article&sid=500#importacionsqlpostgresql
+

@@ -1,0 +1,102 @@
+Instalar un entorno de desarrollo GLAMP (Gnu/Linux+Apache2+PHP5+MySQL)
+Montar un servidor web local Apache
+7/02/14
+
+APACHE
+- Instalar Apache2:
+sudo apt-get install apache2
+
+*Uso básico de Apache:
+sudo /etc/init.d/apache2 {start|stop|restart|reload|force-reload}
+
+- ¿cómo decirle a Apache2 que use los módulos que le instalamos?
+Añadir módulos:
+Se pueden encontrar en /usr/lib/apache2/modules/
+Por ejemplo: Mod_Rewrite sobrescribe las URL para que sean más amigables al usuario.
+
+- Habilitar mod-rewrite:
+	sudo a2enmod rewrite
+
+* a2=apache2, en=enabled, mod=modulo
+
+- Configurando para URLs amigables
+	sudo vi /etc/apache2/apache2.conf
+
+*buscar en el código: Cambiar AllowOverride None por All
+
+<Directory />
+  Options FollowSymLinks
+  AllowOverride All
+</Directory>
+<Directory /var/www/>
+  Options Indexes FollowSymLinks MultiViews
+  AllowOverride All
+  Order allow,deny
+  allow from all
+</Directory>
+
+- Reiniciar apache
+sudo /etc/init.d/apache2 restart
+
+PHP
+- Instalación/Configuración de PHP5
+sudo apt-get install php5 php5-gd php5-pgsql php5-cli php5-cgi libapache2-mod-php5
+
+Algunos cambios a PHP 5
+En /etc/php5/apache2/php.ini:
+
+*Subir archivos al server [tamaño]:
+	upload_max_filesize = 8M
+Uso de la memoria:
+	memory_limit = 32M
+Subir archivos, método POST:
+	post_max_size = 8M
+
+- Iniciar, reiniciar PHP 5?
+PHP 5 corre en el sistema como módulo de Apache2, así que, si hacemos alguna configuración en PHP5 solamente con reiniciar Apache se aplican los cambios realizados.
+sudo /etc/init.d/apache2 restart
+
+- Debemos asignar permisos para 100% de accesibilidad para el ambiente de desarrollo /www
+	sudo chmod -R 777 /var/www
+*recomendable 755 permisos medios.
+*Para testear la configuración de PHP, creamos un archivo info.php dentro de /var/www :
+	<?php phpinfo(); ?> 
+
+Acceder: http://localhost/info.php
+*Deberá exibirse una pagina con todas las configuraciones y extensiones habilitadas de PHP
+
+
+
+MYSQL
+- Instalación/Configuración de MySQL
+sudo apt-get install mysql-server
+
+*En la instalación se le pedirá el password para el usuario root de MySQL, por cuestiones de seguridad, trate de que sea distinto del password de root del sistema.
+Puerto: 3306
+
+Uso básico de MySQL:
+/etc/init.d/mysql {start|stop|restart|reload|force-reload|status}
+
+
+
+- Instalación/Configuración de PHPMyAdmin
+sudo apt-get install phpmyadmin
+
+
+
+
+- Creando Virtual Host en Apache
+http://www.codegeo.com.br/2013/02/criando-virtual-host-com-apache-no.html
+
+http://blog.desdelinux.net/instalacion-de-un-entorno-lamp-en-debian-y-derivados/
+
+
+NOTAS:
+Una forma mas pŕacticas
+http://josmx.com/lamp-server
+
+sudo apt-get install tasksel
+sudo  tasksel
+	[*]LAMP Server
+
+
