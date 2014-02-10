@@ -1,9 +1,9 @@
-Puerto: 5432
+PostgreSQL, es un gestor de base de datos relacional, la primera versión del código fue público el 1 de agosto de 1996, liberado bajo la licencia BSD y desarrollado por “PostgreSQL Global Development Group”.
 
 - Gestor de base de datos PostgreSQL
 - Cliente pgAdminIII o phppgadmin
+Puerto: 5432
 
-PostgreSQL, es un gestor de base de datos relacional, la primera versión del código fue público el 1 de agosto de 1996, liberado bajo la licencia BSD y desarrollado por “PostgreSQL Global Development Group”.
 
 1. Instalar PostgreSQL de la versión 9.1
 -----------------------------------------
@@ -71,4 +71,12 @@ Fuente:
 - http://tubasededatoslibre.org/site/tecnicos-de-la-apn-se-especializan-en-aplicacion-de-herramientas-en-postgresql/
 
 -http://www.ajpdsoft.com/modules.php?name=News&file=article&sid=500#importacionsqlpostgresql
+
+https://www.digitalocean.com/community/articles/how-to-install-and-use-phppgadmin-on-ubuntu-12-04
+http://harishvarada.blogspot.com/2012/09/steps-to-install-postgresql-phppgadmin.html
+
+Tutoriales
+-----------
+-PostgreSQL en Ubuntu 12.04 phppgadmin Parte 1
+http://www.youtube.com/watch?v=8uiQtrpIu0c
 

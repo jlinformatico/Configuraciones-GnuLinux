@@ -1,8 +1,13 @@
 Instalar un entorno de desarrollo GLAMP (Gnu/Linux+Apache2+PHP5+MySQL)
-Montar un servidor web local Apache
+----------------------------------------------------------------------
 7/02/14
+- Instalar y configurar un servidor web Apache
+- Modulo Php
+- Gestor de Base de Datos mysql (mariadb)
+- Administrador Visual de base de datos PhpMyAdmin
+Adicional: modelador MysqlWorkbench, DbVisualizer, Sql Power Architect
 
-APACHE
+1. APACHE
 - Instalar Apache2:
 sudo apt-get install apache2
 
@@ -36,11 +41,34 @@ Por ejemplo: Mod_Rewrite sobrescribe las URL para que sean más amigables al usu
 </Directory>
 
 - Reiniciar apache
-sudo /etc/init.d/apache2 restart
+	sudo /etc/init.d/apache2 restart
+	o
+	sudo service apache2 restart
 
-PHP
+
+2. MYSQL
+- Instalación/Configuración de MySQL
+	sudo apt-get install mysql-server
+	o
+	sudo apt-get install mysql-server mysql-common mysql-client
+
+*En la instalación se le pedirá el password para el usuario root de MySQL, por cuestiones de seguridad, trate de que sea distinto del password de root del sistema.
+Puerto: 3306
+
+Uso básico de MySQL:
+/etc/init.d/mysql {start|stop|restart|reload|force-reload|status}
+
+- Accediendo con las credenciales
+	mysql -u root -p
+
+*-p nos pederia contraseña
+
+
+3. PHP5
 - Instalación/Configuración de PHP5
 sudo apt-get install php5 php5-gd php5-pgsql php5-cli php5-cgi libapache2-mod-php5
+o
+sudo apt-get install php5 libapache2-mod-php5 php5-mysql
 
 Algunos cambios a PHP 5
 En /etc/php5/apache2/php.ini:
@@ -54,35 +82,44 @@ Subir archivos, método POST:
 
 - Iniciar, reiniciar PHP 5?
 PHP 5 corre en el sistema como módulo de Apache2, así que, si hacemos alguna configuración en PHP5 solamente con reiniciar Apache se aplican los cambios realizados.
-sudo /etc/init.d/apache2 restart
+	sudo /etc/init.d/apache2 restart
 
 - Debemos asignar permisos para 100% de accesibilidad para el ambiente de desarrollo /www
 	sudo chmod -R 777 /var/www
 *recomendable 755 permisos medios.
-*Para testear la configuración de PHP, creamos un archivo info.php dentro de /var/www :
+
+ó
+- Una manera mas segura es asignandole permiso a mi usuario: jorge
+	sudo chown jorge:adm /var/www
+	ls -l /var/
+
+*adm es un grupo de administradores en mi sistema
+
+- Testeando
+- Para testear la configuración de PHP, creamos un archivo info.php dentro de /var/www :
 	<?php phpinfo(); ?> 
+*conprobamos que el modulo de php esta corriendo en nuestro servidor apache
+
+- Testeamos la conexion con el servidor de base de datos.
+<?php
+$conexion=mysql_connect('localhost','root','pass') or die("no pudo conectar con db");
+?>
 
 Acceder: http://localhost/info.php
 *Deberá exibirse una pagina con todas las configuraciones y extensiones habilitadas de PHP
 
+Tambien podemos acceder desde nuestro ip del servidor
+	sudo ifconfig
+
+Ejemplo: 192.168.0.63
+*desde cualquier cliente accedemos mediante la ip a nuestro servidor.
 
 
-MYSQL
-- Instalación/Configuración de MySQL
-sudo apt-get install mysql-server
-
-*En la instalación se le pedirá el password para el usuario root de MySQL, por cuestiones de seguridad, trate de que sea distinto del password de root del sistema.
-Puerto: 3306
-
-Uso básico de MySQL:
-/etc/init.d/mysql {start|stop|restart|reload|force-reload|status}
-
-
-
-- Instalación/Configuración de PHPMyAdmin
+4. Instalación/Configuración de PHPMyAdmin
 sudo apt-get install phpmyadmin
 
-
+- quizas es necesario
+	sudo ln -s /usr/share/phpmyadmin /var/www/
 
 
 - Creando Virtual Host en Apache
@@ -92,11 +129,20 @@ http://blog.desdelinux.net/instalacion-de-un-entorno-lamp-en-debian-y-derivados/
 
 
 NOTAS:
+------
 Una forma mas pŕacticas
 http://josmx.com/lamp-server
 
 sudo apt-get install tasksel
 sudo  tasksel
 	[*]LAMP Server
+
+
+Tutoriales
+----------
+- Tutorial Instalar Apache + MySQL + PHP + PHPMyAdmin Ubuntu 12.04.1 completo:
+http://www.youtube.com/watch?v=juPhP1iHWSs
+
+http://www.youtube.com/watch?v=FqSNaaEBI20
 
 
