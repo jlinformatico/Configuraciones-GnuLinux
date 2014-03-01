@@ -1,0 +1,139 @@
+PHP FRAMEWORK LARAVEL 
+---------------------
+https://github.com/laravel/laravel
+http://bundles.laravel.com/bundle/bootstrapper
+
+- CHEAT SHEET
+-------------
+http://cheats.jesse-obrien.ca/
+https://github.com/JesseObrien/laravel-cheatsheet
+
+- TUTORIALES
+http://codehero.co/series/laravel-4-desde-cero/
+http://codehero.co/laravel-4-desde-cero-estructura-del-proyecto/
+http://www.cristalab.com/tags/laravel/
+http://www.cristalab.com/blog/porque-elegir-laravel-en-vez-de-codeigniter-c111947l/
+
+
+- http://adrianbarabino.net/2013/05/contruyendo-una-api-restful-en-php-usando-laravel/
+- http://net.tutsplus.com/tutorials/php/laravel-4-a-start-at-a-restful-api/
+
+
+Buenos Tutos para manual:
+http://fernando-gaitan.com.ar/category/laravel/page/2/
+
+http://www.codeforest.net/laravel4-simple-website-with-backend-1
+
+http://www.antoniopol.es/2013/04/empezando-con-laravel/
+http://www.antoniopol.es/2013/05/videotutoriales-laravel/
+
+http://www.elserver.com/conociendo-laravel-el-framework-que-revoluciono-php/
+
+http://uno-de-piera.com/laravel-un-potente-framework-php/
+http://uno-de-piera.com/login-con-laravel/
+http://fuubar.wordpress.com/2013/06/27/sistema-de-identificacion-login-simple-en-laravel-4/
+http://uno-de-piera.com/sencillo-sistema-de-roles-de-usuarios-en-laravel-4/
+
+DEPLOYING
+http://blog.enge.me/post/a-comprehensive-tutorial-for-deploying-laravel-4-on-heroku
+
+
+CODIGO:
+https://github.com/nestoronald/tienda-laravel
+http://ayudalaravel.com/recursos-para-aprender-laravel
+http://codedog.net/2013/11/22/cooking-with-laravel/
+https://github.com/JeffreyWay/Laravel-Generator
+
+
+https://www.workana.com/projects?query=Laravel
+
+
+- LARACON - CONFERENCIA
+http://conference.laravel.com/
+laracasts.com
+
+- LARAVEL INTEGRADO EN FACEBOOK APP
+http://maxoffsky.com/code-blog/integrating-facebook-login-into-laravel-application/
+
+COMUNIDADES.
+http://www.laravel.com.br/hangout-laravel-brasil-7/
+http://laraveles.com/foro/
+http://net.tutsplus.com/tag/laravel/
+fideloper.com/tag/laravel
+laravel.io
+
+
+VIDEOTUTORIALES
+---------------
+- Como empezar con Laravel (Mejorando.la)
+http://www.youtube.com/watch?v=8dKBycSTz3Q
+
+Crear una app web en Laravel
+http://www.youtube.com/watch?v=ajiAJf-rT0s
+
+Curso Laravel
+- http://www.youtube.com/watch?v=A7z3dpBtR_I&list=PLFgItpP6S3zTFRZWghRv9iknk2AqvNk36
+
+- Laravel Intensivo (Jesús Conde)
+http://www.youtube.com/playlist?list=PLEtcGQaT56chQN6n4byqRIMYnTHpgkG6m
+
+- Laravel: Creación de un Foro. Antonio POL
+http://www.youtube.com/playlist?list=PL_BdidO3syC0EXe4eKYAukquriL5XV3Ti
+
+- Creating A simple blog with Laravel
+http://www.youtube.com/watch?v=TvQwtOX_dCc
+
+
+- Phill Sparks. Software Design Patterns in Laravel 4
+http://www.youtube.com/watch?v=qkIsTtIcTBE
+
+- Laravel Framework: Operações CRUD
+http://vimeo.com/61099364
+- Framework: Model, View, Controler (DESCARGAS ARCHIVOS)
+
+
+Fpdf
+http://bundles.laravel.com/bundle/Fpdf
+https://github.com/markvaneijk/laravel-dompdf/blob/master/dompdf.php
+
+LIBROS:
+- Laravel 4 Cookbook
+- Laravel Application Development Cookbook
+- De Aprendiz ao Artisan
+
+http://www.packtpub.com/sites/default/files/9781782162827_Chapter_02.pdf
+
+
+RUBY ON RAILS
+-------------
+http://fernando-gaitan.com.ar/category/ruby_on_rails/
+
+http://www.railsbricks.net/
+
+
+NODE.JS
+-------
+http://fernando-gaitan.com.ar/category/node-js/
+
+
+ARQUITECTURAS DE SOFTWARE
+------------
+http://www.users.abo.fi/lpetre/SA10/
+
+D3 on AngularJS
+---------------
+DYNAMIC VISUALIZATION WITH ANGULAR AND D3
+http://www.youtube.com/watch?v=BvAeabvZ61o
+
+
+PYTHON
+------
+- Learn Python for Science - Numpy, SciPy, Matplotlib
+http://www.youtube.com/watch?v=oYTs9HwFGbY
+
+
+GIT
+---
+http://tortoisehg.bitbucket.org/
+
+http://faisonz.com/blog/github-for-windows-and-bitbucket/

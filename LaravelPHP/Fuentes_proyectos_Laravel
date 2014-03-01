@@ -1,0 +1,83 @@
+
+- Laravel 4 Bootstrap Starter Site
+-----------------------------------
+Revisar instrucciones para instalarlo en:
+https://github.com/andrew13/Laravel-4-Bootstrap-Starter-Site
+
+*Es un fork de: https://github.com/brunogaspar/laravel4-starter-kit
+- How to build a CMS with Laravel - Introduction - Installing Starter Kit [excelente]
+http://www.youtube.com/watch?v=n7aS4MllX8s
+
+otra version en version 4.1: (mejorado)
+https://github.com/58bits/laravel-4-bootstrap-3-starter
+--------------------------------------------------------
+
+http://scotch.io/series/simple-laravel
+- Simple Laravel CRUD with Resource Controllers [excelente tutorial]
+------------------------------------------------
+http://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers
+https://github.com/scotch-io/simple-laravel-crud
+
+- Create a Laravel and Angular Single Page Comment Application
+--------------------------------------------------------------
+http://scotch.io/tutorials/php/create-a-laravel-and-angular-single-page-comment-application
+https://github.com/scotch-io/laravel-angular-comment-app
+
+Installation
+------------
+1.Clone the repo: git clone git@github.com:scotch-io/laravel-angular-comment-app
+2.Install Laravel: composer install --prefer-dist / composer install --dev
+3.Change your database settings in app/config/database.php
+4.Migrate your database: php artisan migrate
+5.Seed your database: php artisan db:seed
+6.View your application in browser port 8000: php artisan serve
+
+
+- A Laravel 4.1 Bootstrap CMS [EXCELENTE]
+------------------------------
+A Laravel 4, Bootstrap 3 CMS Built With SOLID Principles In Mind
+- Get Started With Laravel Bootstrap (Laravel 4.1) 
+http://www.youtube.com/watch?v=G0FQfUy3TGg
+https://github.com/davzie/laravel-bootstrap
+
+
+- Laravel 4 Site Tutorial [TUTORIAL]
+-------------------------
+http://www.codeforest.net/laravel4-simple-website-with-backend-1
+http://www.codeforest.net/laravel-4-tutorial-part-2
+https://github.com/bstrahija/l4-site-tutorial
+
+MOdulos en Laravel: https://github.com/creolab/laravel-modules
+autor: http://creolab.hr/projects/
+
+- Crear una aplicación web en Laravel 4 [l4blog] (excelente) REVISADO
+----------------------------------------
+https://github.com/JaimeMSE/CursoLaravel-AppWeb
+http://www.youtube.com/watch?v=ajiAJf-rT0s&feature=youtu.be
+
+
+- Laravel-4-login-registration (fallendown) REVISADO
+------------------------------
+Login and Registration source files from my Video tutorial series:
+https://github.com/fallendown/Laravel-4-login-registration
+
+- Laravel 4 CRUD
+----------------
+https://github.com/fallendown/Laravel_4_CRUD_Tutorial
+
+- CRUD LARAVEL 4
+----------------
+http://uno-de-piera.com/crud-con-laravel-4/
+https://github.com/uno-de-piera/crud_laravel
+
+
+-Laravel-dashboard (3.2)
+------------------
+https://github.com/flaviozantut/laravel-dashboard
+
+
+-Vagrant & Laravel - Supercharging your development environment
+http://www.youtube.com/watch?v=fnEFB7thH_s
+https://github.com/Capital-Laravel-Group/Meetup-002
+http://www.meetup.com/Capital-Laravel-Group/
+

@@ -1,0 +1,49 @@
+LARAVEL PHP
+-----------
+
+- How to Setup Laravel 4
+
+
+1. Instalar Composer en Linux:
+- Instalar manejador de paquetes y dependencias entre paquetes para PHP.
+	curl -sS https://getcomposer.org/installer | php
+
+*considerar que debe estar activo openssl en php.ini
+si no tienen CURL instalado:
+Código :
+	php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
+
+*Si todo sale bien ya podrán usar Composer con el siguiente comando:
+	php composer.phar
+
+- Mover composer.phar
+	sudo mv composer.phar /usr/local/bin/composer
+
+*El primer comando descarga el archivo composer.phar en nuestras computadoras (.phar es una extensión para aplicaciones PHP comprimidas), la ruta de PHP puede cambiar dependiendo de donde este instalado en la computadora (Lo importante es que la versión que se utilice sea mayor a 5.2). El segundo comando mueve el archivo descargado a la carpeta bin para que Composer pueda ser ejecutado globalmente.
+
+- Por último verificamos la instalación con el siguiente comando.
+
+	#composer
+
+*Si la instalación ha terminado correctamente, entonces nos debe aparece una lista de los comandos y opciones que tiene Composer.
+
+
+2. Instalación de Laravel 4
+- Para esto simplemente abrimos nuestro terminal, vamos a la carpeta que utilice nuestro servidor( htdocs o www ) y ejecutamos el siguiente comando
+
+	composer create-project laravel/laravel proyecto-laravel --prefer-dist
+	
+Este comando descarga una copia completa de la versión mas reciente de Laravel 4 desde los repositorios de Composer con todas las dependencias y librerías que el framework necesita. El proyecto se creara con el nombre que se le indique en el parámetro, en este caso lo llamamos proyecto-laravel
+
+*Ya tenemos un proyecto de Laravel 4 creado, vamos a probarlo. Para esto debemos correr nuestro servidor Apache y entrar desde el navegador a localhost/proyecto-laravel/public
+
+Otra Forma:
+	git clone https://github.com/laravel/laravel.git
+	composer install --dev
+
+Para ejecutarlo en el navegador:
+darle permisos de escritura a la carpeta /app/. Esto lo podemos hacer ejecutando el comando:
+	sudo chmod -R 777 storage.
+
+
+
