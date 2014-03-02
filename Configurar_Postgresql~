@@ -68,7 +68,7 @@ host: localhost
 password: va el pass que le asignamos a posgress
 
 
-- Instalar phpPgAdmin (AUN NO FUNCIONA XD)
+- Instalar phpPgAdmin
 ---------------------
 http://tubasededatoslibre.org/site/phppgadmin-debian-wheezy/
 https://www.digitalocean.com/community/articles/how-to-install-and-use-phppgadmin-on-ubuntu-12-04
