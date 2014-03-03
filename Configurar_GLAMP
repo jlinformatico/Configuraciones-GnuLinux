@@ -128,6 +128,22 @@ http://www.codegeo.com.br/2013/02/criando-virtual-host-com-apache-no.html
 http://blog.desdelinux.net/como-proteger-nuestros-sitios-usando-htpasswd-ejemplos/
 
 
+XAMPP PARA GNU/LINUX
+--------------------
+http://www.apachefriends.org/es/xampp-linux.html#4046
+
+Descomprimir en /opt
+tar xvfz xampp-linux-1.8.1.tar.gz -C /opt
+
+Iniciar XAMPP
+sudo /opt/lampp/lampp start
+*Debería salir un mensaje como el siguiente:
+Starting XAMPP 1.8.1...
+LAMPP: Starting Apache...
+LAMPP: Starting MySQL...
+LAMPP started.
+
+
 NOTAS:
 ------
 Una forma mas pŕacticas
