@@ -1,0 +1,66 @@
+
+- MariaDB: una alternativa para MySQL
+http://www.mikejr1.es/linux/index.php/-noticias-mundo-linux-/software/6516-mariadb-la-alternativa-a-mysql.html
+- http://jallander.wordpress.com/2013/04/13/instalando-mariadb-en-ubuntu/
+- http://blog.desdelinux.net/de-mysql-a-maria-db-guia-rapida-de-migracion-para-debian/
+
+- Cheat Sheet: http://www.addedbytes.com/cheat-sheets/mysql-cheat-sheet/
+http://www.cheat-sheets.org/
+http://cse.unl.edu/~sscott/ShowFiles/SQL/CheatSheet/SQLCheatSheet.html
+https://www.addedbytes.com/cheat-sheets/php-cheat-sheet/
+
+- MariaDB
+---------
+Desarrollado por el creador de Mysql (Michael “Monty” Widenius), en conjunto con una comunidad de programadores que siempre acompañan el trabajo del gran “Monty”
+
+-----------------------------------------
+- Si queremos sustituir MySQL por MariaDB
+Eliminamos MySQL ejecutando los comandos:
+sudo apt-get remove --purge mysql-server mysql-client mysql-common
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+- Visitamos MariaDB Repositories:
+	https://downloads.mariadb.org/mariadb/repositories/
+
+Seleccionamos nuestra distro para que genere el codigo.
+	Linuxmint 16 Petra -> 5.5 -> Web Africa (mirror server)
+
+
+1) Agregar Repositorios:
+------------------------
+*You can also create a custom MariaDB sources.list file. To do so, copy and paste the following into a file under /etc/apt/sources.list.d/(we suggest naming the file MariaDB.list or something similar), or add it to the bottom of your /etc/apt/sources.list file.
+
+	sudo gedit /etc/apt/sources.list
+
+# MariaDB 5.5 repository list - created 2014-02-28 15:15 UTC
+# http://mariadb.org/mariadb/repositories/
+deb http://ftp.wa.co.za/pub/mariadb/repo/5.5/ubuntu saucy main
+deb-src http://ftp.wa.co.za/pub/mariadb/repo/5.5/ubuntu saucy main
+
+-----------------------------------------------
+
+sudo apt-get install software-properties-common
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+sudo add-apt-repository 'deb http://ftp.wa.co.za/pub/mariadb/repo/5.5/ubuntu saucy main'
+
+
+- Actualizar paquetes e instalar MariaDB
+----------------------------------------
+sudo apt-get update
+sudo apt-get install mariadb-server
+
+
+- Podemos instalar phpmyadmin y reiniciamos el servicio de apache.
+	sudo apt-get install phpmyadmin
+	sudo service apache2 restart
+
+*Un tema importante es que nuestros programas cliente (php, python, etc.) no notarán la diferencia entre MySQL y MariaDB y funcionarán perfectamente sin ninguna modificación. Podemos usar el cliente en línea de comandos MariaDB Monitor de la misma forma que si estuviéramos usando MySQL.
+
+	comando: mysql
+
+
+
+Fuentes: http://www.linuxjournal.com/content/mariadbmysql-postgresql-and-sqlite3-comparing-command-line-interfaces
+
+

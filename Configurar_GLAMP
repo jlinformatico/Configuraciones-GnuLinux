@@ -6,8 +6,12 @@ Instalar un entorno de desarrollo GLAMP (Gnu/Linux+Apache2+PHP5+MySQL)
 - Gestor de Base de Datos mysql (mariadb)
 - Administrador Visual de base de datos PhpMyAdmin
 Adicional: modelador MysqlWorkbench, DbVisualizer, Sql Power Architect
+- http://matheuspiscioneri.com.br/blog/sql-power-architect-no-ubuntu-12-10/
+http://www.sqlpower.ca/page/architect
+- http://postgresqlbr.blogspot.com.br/2009/01/power-architect-tima-ferramenta-livre.html
 
 1. APACHE
+----------
 - Instalar Apache2:
 sudo apt-get install apache2
 
@@ -46,7 +50,8 @@ Por ejemplo: Mod_Rewrite sobrescribe las URL para que sean más amigables al usu
 	sudo service apache2 restart
 
 
-2. MYSQL
+2. MYSQL (puedo usar la opcion de configurar mariadb)
+---------
 - Instalación/Configuración de MySQL
 	sudo apt-get install mysql-server
 	o
@@ -65,6 +70,7 @@ Uso básico de MySQL:
 
 
 3. PHP5
+--------
 - Instalación/Configuración de PHP5
 sudo apt-get install php5 php5-gd php5-pgsql php5-cli php5-cgi libapache2-mod-php5
 o
@@ -116,6 +122,7 @@ Ejemplo: 192.168.0.63
 
 
 4. Instalación/Configuración de PHPMyAdmin
+------------------------------------------
 sudo apt-get install phpmyadmin
 
 - quizas es necesario
@@ -123,6 +130,7 @@ sudo apt-get install phpmyadmin
 
 
 - Creando Virtual Host en Apache
+--------------------------------
 http://www.codegeo.com.br/2013/02/criando-virtual-host-com-apache-no.html
 [SEGURIDAD - MUY IMPORTANTE]
 http://blog.desdelinux.net/como-proteger-nuestros-sitios-usando-htpasswd-ejemplos/
