@@ -1,0 +1,43 @@
+Mis apuntes
+------------
+sudo apt-get install build-essential linux-headers-`uname -r` dkms
+ls - Lista Archivos
+pwd - Carpeta Actual
+cd [carpeta] - Cambiar Directorio
+vi/vim - Editor de Texto
+rm [archivo] - Eliminar
+cp [archivo] [nuevo_archivo] - Copiar
+mkdir - Crear Directorios o carpetas
+rm -R
+
+clear
+
+Usar siempre -> [Tab]
+
+/
+/etc
+/bin
+/home
+/dev
+/media -- dispositivos de almacenamiento conectados
+/opt -- programas instalados por el usuario
+/var
+
+Comandos
+which -- ubica el programa
+whoami -- que usuario estoy utilizando
+dmesg -- mensajes del sistema
+df -h -- ver estado de los dispositivos de almacenamiento
+tail -f [nombre_archivo] -- lee un archivo y esta pendiente de los cambios
+sudo -- permisos de administrador
+sudo service apache2 restart -- Reiniciar apache
+chmod 777 -R [nombre_carpeta] -- Cambia permisos de la carpeta
+
+para salir Ctrl + C
+
+127.0.0.1 -- localhost
+
+Creamos un Carpeta "web" en "/var/www"
+Modificamos el archivo "default" en "/etc/apache2/sites-avalible"
+  - Cambiamos el "DocumentRoot" de "/var/www" a "/var/www/web"
+Cambiamos los permisos a "777" de la carpeta "web"

@@ -1,0 +1,29 @@
+En esta sección preparo mi entrono de trabajo, mencionaré las herramientas a utilizar, como obtenerlas y la puesta en marcha.
+
+Primero que nada quiero hacer énfasis que la programación web tiene diferentes enfoques y diferentes áreas de trabajo. Mi forma de pensar es que uno debe de tener un conocimiento general de todo para poder ubicar a que queremos dedicarnos. La programación web es amplia y te exige ser ordenado.
+
+Herramientas que utilizo:
+-------------------------
+	Sistema Operativo GNU/Linux: LinuxMint, Debian 7.
+	Servidor Web: Apache, Nginx.
+	Controlador de Versiones: Git
+	Servicios Git: Github, Bitbucket
+	Lnguaje de Programación: PHP, Python, Ruby, Javascript.
+	Librería de Javascript jQuery.
+	Hojas de estido CSS3.
+	Lenguaje de enmarcado HTML5.
+	Framework Front-End: Bootstrap, Foundation (http://foundation.zurb.com/).
+	PHP framework: laravel4.
+	Editor de texto: vim.
+	Editor de codigo: Geany, Netbeans IDE.
+	Herramienta de virtualización VirtualBox.
+
+
+Algunos paquetes para el entorno de desarrollo:
+-----------------------------------------------
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+
+sudo apt-get install -y libapache2-mod-php5 apache2 php5 postgresql-9.1 php5-pgsql pgadmin3 php5-gd php5-mcrypt php-pear php5-cli php5-cgi php5-dev netbeans vim-gtk git-core sublime-text-installer chromium-browser
+
+
