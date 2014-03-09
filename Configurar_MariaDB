@@ -63,6 +63,7 @@ sudo apt-get install mariadb-server
 
 
 
-Fuentes: http://www.linuxjournal.com/content/mariadbmysql-postgresql-and-sqlite3-comparing-command-line-interfaces
-
+Fuentes:
+- http://www.linuxjournal.com/content/mariadbmysql-postgresql-and-sqlite3-comparing-command-line-interfaces
+- http://laegnur.artabro.org/es/mariadb-instruciones-definicion-datos-database/
 

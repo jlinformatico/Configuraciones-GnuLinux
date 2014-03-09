@@ -18,6 +18,9 @@ http://scotch.io/series/simple-laravel
 http://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers
 https://github.com/scotch-io/simple-laravel-crud
 
+* another basic crud on laravel 4
+http://www.darwinbiler.com/creating-a-basic-crud-on-laravel-4/
+
 - Create a Laravel and Angular Single Page Comment Application
 --------------------------------------------------------------
 http://scotch.io/tutorials/php/create-a-laravel-and-angular-single-page-comment-application
@@ -49,6 +52,12 @@ https://github.com/bstrahija/l4-site-tutorial
 
 MOdulos en Laravel: https://github.com/creolab/laravel-modules
 autor: http://creolab.hr/projects/
+
+
+- My Laravel 4 Blog App (with Twitter Bootstrap)
+------------------------------------------------
+https://github.com/rkosinski/old-blog
+
 
 - Crear una aplicación web en Laravel 4 [l4blog] (excelente) REVISADO
 ----------------------------------------

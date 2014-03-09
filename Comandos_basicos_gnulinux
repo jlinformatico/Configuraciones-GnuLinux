@@ -1,3 +1,31 @@
+GnuLinux es el Sistema Operativo preferido por los administradores de servidores. Claramente, su potencia, seguridad, agilidad, robustez y precio, han sido los factores que han llevado a este "casi perfecto" sistema a la cima.
+
+Todos los principales servidores en Internet, están usando Linux. Lo hace Google, la NASA, Yahoo, etc. Inclusive, el servidor donde este blog está hospedado, es administrado por Linux.
+
+El objetivo de esta entrada es despertar la curiosidad por este gran gran gran sistema, mediante la publicación de los principales comandos utilizados en su famosa y temida Terminal de Linux. Es súmamente fácil.
+
+Empezamos con algunos comandos sobre gestión de archivos:
+
+    man [termino] = Muestra una ayuda sobre termino.
+    ln -s [archivo] = Crea un enlace blando.
+    rm -r [directorio] = Elimina un directorio recursivamente.
+    rm [archivo] = Elimina un archivo completamente.
+    mkdir [directorio] = Crea una nueva carpeta dentro del directorio.
+    mv [orgien] [destino] = Mueve al archivo origen al directorio destino.
+    cp [origen] [destino] = Copia el archivo origen al directorio destino.
+    cd [ruta] = Se desplaza al directorio especificado en la ruta
+    cd .. = Se mueve al directorio anterior
+    pwd = Muestra el directorio actual
+    cat -n [fichero] = Muestra el contenido de un fichero numerando sus lineas
+    ls = Lista los archivos de un directorio concreto
+    ls -l = Añade informacion sobre los atributos
+    ls -a = Lista todos los archivos incluyendo los ocultos
+    clear = Limpia la pantalla
+    date = Muestra la hora y la fecha en formato completo
+    chmod [+|-][rwx] [archivo] = Añade(+) o elimina(-) los permisos de lectura(r), escritura(w) o ejecucion(x) del archivo o directorio.
+    chown [nuevo propietario] [archivos] = Cambia de propietario a los archivos
+
+
 Mis apuntes
 ------------
 sudo apt-get install build-essential linux-headers-`uname -r` dkms

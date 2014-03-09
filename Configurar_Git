@@ -1,0 +1,59 @@
+Git + GitHub on Gnu/linux
+-----------------------------
+Instalación Git en Linuxmint
+-----------------------------
+0. Instalar git en Gnu/Linux, para windows decargar .exe o .msi
+	
+	sudo apt-get install git
+	comprobar: git --version
+	git config --global user.name "Tu Nombre"
+	git config --global user.email tu-email@servicio.com
+	git config --global core.editor "editor"
+
+*Por temas de seguridad crearemos nuestra llave de acceso
+- generar clave ssh (añadirlo en llaves de acceso de nuestra cuenta github)
+ssh-keygen (generamos el archivo y le asignamos una contraseña se guarda en /home)
+*vamos a home, ls
+cd .ssh/
+cat id_rsa.pub (copiar nuestro ssh del ordenador y lo pegamos en nuestro github)
+
+*para ver la version del ssh
+ssh -v
+
+Github (create una cuenta)
+-------
+1. Si estás accediendo a un repositorio ya creado:
+- Desde la carpeta que quieres que contenga la subcarpeta con el repositorio:
+	git clone https://github.com/jlinformatico/vim
+*Haciendo esto ya se crea automáticamente un remote con el nombre "origin" apuntando al repositorio a partir del cual clonaste tu copia local.
+- Para actualizarlo en el futuro sólo tienes que hacer desde dentro del directorio
+	git pull origin master
+
+2. Si eres tú el que va a crear un repositorio:
+- Primero vas a Github y te creas un repositorio vacío, el mio lo he creado con el nombre "python".
+- Luego desde tu ordenador:
+git init python 
+cd python
+git add *.*
+git commit -m "Mi primer commit"
+git remote add origin https://github.com/jlinformatico/python.git
+git push -u origin master
+
+3. Interactua con los comandos
+- Para que se muestre la ayuda:
+	git help
+- Para consultar los remote que tienes dados de alta:
+	git remote
+- Para ver los ficheros que han cambiado, estan pendientes de añadir o sincronizar:
+	git status
+
+- Lista completa de comandos en: http://gitref.org/
+- Para convertirse en un ninja de git - Git Documentation:
+http://git-scm.com/documentation
+
+- Guias: http://www.webbizarro.com/noticias/538/guias-para-aprender-github/
+[Excelente guia git en español: charliedontcode.com/programacion/2011/11/27/tutorial-de-git-en-espanol.html
+La guia sencilla: http://rogerdudler.github.io/git-guide/index.es.html
+
+http://blog.xenodesystems.com/2012/05/tutorial-git-desde-cero.html
+
