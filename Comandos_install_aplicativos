@@ -1,0 +1,18 @@
+Comandos para instalar aplicativos en gnu/linux
+-----------------------------------------------
+- How to install Sweet Home 3D 4.1 on Ubuntu 13.04 Raring Ringtail, Linux Mint 15 Olivia and Pear OS 8:
+	sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu raring-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+	wget -q -O- http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+	sudo apt-get update
+	sudo apt-get install sweethome3d
+
+- http://linuxg.net/how-to-install-sweet-home-3d-4-1-on-ubuntu-13-04-12-04-linux-mint-15-13-elementary-os-0-2-and-pear-os-8/
+- http://www.taringa.net/posts/linux/5286889/Diseno-de-interiores-en-GNU-Linux-Sweet-Home-3d.html
+
+Fuentes
+-------
+- Recursos 3D para sweet home
+http://www.sweethome3d.com/es/index.jsp
+http://archive3d.net/?category=223
+
+
