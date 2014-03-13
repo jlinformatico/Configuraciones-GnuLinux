@@ -5,6 +5,11 @@ LARAVEL PHP
 
 
 1. Instalar Composer en Linux:
+------------------------------
+- De ser necesario:
+	sudo apt-get install php5-curl
+	sudo apt-get install curl
+
 - Instalar manejador de paquetes y dependencias entre paquetes para PHP.
 	curl -sS https://getcomposer.org/installer | php
 
@@ -12,7 +17,6 @@ LARAVEL PHP
 si no tienen CURL instalado:
 Código :
 	php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
-
 *Si todo sale bien ya podrán usar Composer con el siguiente comando:
 	php composer.phar
 
@@ -20,6 +24,9 @@ Código :
 	sudo mv composer.phar /usr/local/bin/composer
 
 *El primer comando descarga el archivo composer.phar en nuestras computadoras (.phar es una extensión para aplicaciones PHP comprimidas), la ruta de PHP puede cambiar dependiendo de donde este instalado en la computadora (Lo importante es que la versión que se utilice sea mayor a 5.2). El segundo comando mueve el archivo descargado a la carpeta bin para que Composer pueda ser ejecutado globalmente.
+
+- Laravel, como lo indica su documentación, necesita MCrypt PHP Extension, entonces procedemos a instalarlo:
+	sudo apt-get install php5-mcrypt
 
 - Por último verificamos la instalación con el siguiente comando.
 
@@ -29,6 +36,7 @@ Código :
 
 
 2. Instalación de Laravel 4
+---------------------------
 - Para esto simplemente abrimos nuestro terminal, vamos a la carpeta que utilice nuestro servidor( htdocs o www ) y ejecutamos el siguiente comando
 
 	composer create-project laravel/laravel proyecto-laravel --prefer-dist
@@ -44,6 +52,82 @@ Otra Forma:
 Para ejecutarlo en el navegador:
 darle permisos de escritura a la carpeta /app/. Esto lo podemos hacer ejecutando el comando:
 	sudo chmod -R 777 storage.
+
+3. Migraciones
+--------------
+Las migraciones permiten configurar y modificar la estructura de una base de datos. Creando una especie de “control de versiones” de base de datos que puede ser usada por una o más personas dentro del equipo de desarrollo.
+
+Para instalar nuestras migraciones en la base de datos, vamos a abrir la consola de comandos, entrar en nuestro proyecto:
+	C:\xampp\htdocs\mi_proyecto_laravel
+
+	php artisan migrate:install
+*Se creará en nuestra base de datos una tabla migrations
+
+- vamos a crear nuestra primer migración con la tabla: “users”.
+	php artisan migrate:make create_users_table
+
+*podemos visualizarlo en app/database/migrations
+
+Se encuentra una clase con el nombre: “CreateUsersTable” que extienda de otra llamada Migration, y a su vez esta clase tendrá dos métodos definidos, aunque vacíos. El método up() es el que le indicará a nuestra migración qué es lo que tiene que hacer, osea crear la tabla users con sus respectivas columnas. Mientras que el método down() se ejecutará cuando queramos revertir la migración, por ejemplo eliminar la tabla.
+
+- Editaremos el método up():
+
+public function up()
+ {
+    Schema::table('users', function($table){
+       $table->create(); //creamos la tabla
+		//definimos los métodos
+       $table->increments('id'); //tipo de datos autoincrementable llamado id
+       $table->string('email');
+       $table->string('real_name');
+       $table->string('password');
+       $table->integer('level');
+       $table->boolean('active');
+       $table->timestamps(); //creamos dos columnas más, que servirán para tener un control de la fecha y la hora de cuándo un registro se inserta o se modifica
+    });
+ }
+
+
+- Editar el contenido del método down():
+
+public function down()
+ {
+    Schema::drop('users'); //Aquí simplemente eliminamos la tabla
+ }
+
+- Entonces vamos a ejecutar nuestra migración para así crear la tabla ‘users’
+
+	php artisan migrate //se ejecuta el método up()
+
+- sí queremos volver atrás nuestra migración debemos escribir
+
+	php artisan migrate:rollback //se ejecuta el método down() que elimina la tabla
+
+*Algo importante de aclarar es que en Laravel se acostumbra a trabajar con nombre de tablas en plural, aunque se puede romper con esta regla no es recomendable
+
+
+Modelos: Eloquent ORM
+---------
+Los modelos son clases que representaban tablas de una base de datos. Además que esa clases tienen métodos que tendrían una suerte de consulta y cada objeto instanciado sería un registro.
+
+-Eloquent es una clase ORM de Laravel.
+Vamos a crear un modelo para representar la tabla que creamos, la tabla users.
+	app/models
+
+*La tabla se en la base de datos para guardar se llama users, mientras que el modelo es User.
+//las tablas se escriben en plural, mientras que los modelos con la primer letra en mayúscula y en singular
+
+- User.php
+
+<?php
+class User extends Eloquent {
+	protected $table = 'otro_nombre_para_la_tabla'; //indicar nombre tabla
+}
+?>
+
+
+
+
 
 
 
