@@ -1,3 +1,19 @@
+LARAVEL PROJECTS
+=================
+- Crear una aplicación web (blog) en Laravel 4 [l4blog] (excelente)
+-------------------------------------------------------------------
+https://github.com/JaimeMSE/CursoLaravel-AppWeb [REVISADO]
+http://www.youtube.com/watch?v=ajiAJf-rT0s&feature=youtu.be
+
+- Source code for simple laravel 4 blog tutorial con Foundation 5 (revisar)
+https://github.com/usm4n/laravel-tutorial-codeheaps
+
+- My Laravel 4 Blog App (with Twitter Bootstrap)
+https://github.com/rkosinski/old-blog
+
+- Proyectos variados:
+https://github.com/nestoronald/tienda-laravel
+
 
 - Laravel 4 Bootstrap Starter Site
 -----------------------------------
@@ -17,9 +33,6 @@ http://scotch.io/series/simple-laravel
 ------------------------------------------------
 http://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers
 https://github.com/scotch-io/simple-laravel-crud
-
-* another basic crud on laravel 4
-http://www.darwinbiler.com/creating-a-basic-crud-on-laravel-4/
 
 - Create a Laravel and Angular Single Page Comment Application
 --------------------------------------------------------------
@@ -50,19 +63,20 @@ http://www.codeforest.net/laravel4-simple-website-with-backend-1
 http://www.codeforest.net/laravel-4-tutorial-part-2
 https://github.com/bstrahija/l4-site-tutorial
 
-MOdulos en Laravel: https://github.com/creolab/laravel-modules
+TUTORIALES
+-----------
+- Building a Customer Management App Using AngularJS and Laravel
+http://code.tutsplus.com/tutorials/building-a-customer-management-app-using-angularjs-and-laravel--net-36444
+- another basic crud on laravel 4
+http://www.darwinbiler.com/creating-a-basic-crud-on-laravel-4/
+- Laravel 4: A Start at a RESTful API (Updated)
+http://code.tutsplus.com/tutorials/laravel-4-a-start-at-a-restful-api-updated--net-29785
+- Combining Laravel 4 and Backbone
+http://code.tutsplus.com/tutorials/combining-laravel-4-and-backbone--net-31745
+- http://code.tutsplus.com/tutorials/building-a-customer-management-app-using-angularjs-and-laravel--net-36444
+
+Modulos en Laravel: https://github.com/creolab/laravel-modules
 autor: http://creolab.hr/projects/
-
-
-- My Laravel 4 Blog App (with Twitter Bootstrap)
-------------------------------------------------
-https://github.com/rkosinski/old-blog
-
-
-- Crear una aplicación web en Laravel 4 [l4blog] (excelente) REVISADO
-----------------------------------------
-https://github.com/JaimeMSE/CursoLaravel-AppWeb
-http://www.youtube.com/watch?v=ajiAJf-rT0s&feature=youtu.be
 
 
 - Laravel-4-login-registration (fallendown) REVISADO
@@ -71,6 +85,8 @@ Login and Registration source files from my Video tutorial series:
 https://github.com/fallendown/Laravel-4-login-registration
 
 - Otro login básico: https://github.com/gmlo89/login_basico_con_laravel
+- http://fuubar.wordpress.com/2013/06/27/sistema-de-identificacion-login-simple-en-laravel-4/
+https://github.com/nikoskip/simple-login-laravel4
 
 - Laravel 4 CRUD
 ----------------
