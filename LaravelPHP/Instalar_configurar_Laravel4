@@ -2,7 +2,9 @@ LARAVEL PHP
 -----------
 
 - How to Setup Laravel 4
-
+PagodaBox una plataforma web de hosting: https://pagodabox.com/
+http://webfocustuts.tumblr.com/post/54755697223/como-instalar-laravel-en-pagodabox
+http://jgimeno.com/informatica/laravel-usando-el-bootstrap-de-twitter-basset-y-pagoda-parte-1/
 
 1. Instalar Composer en Linux:
 ------------------------------
@@ -58,7 +60,7 @@ darle permisos de escritura a la carpeta /app/. Esto lo podemos hacer ejecutando
 Las migraciones permiten configurar y modificar la estructura de una base de datos. Creando una especie de “control de versiones” de base de datos que puede ser usada por una o más personas dentro del equipo de desarrollo.
 
 Para instalar nuestras migraciones en la base de datos, vamos a abrir la consola de comandos, entrar en nuestro proyecto:
-	C:\xampp\htdocs\mi_proyecto_laravel
+	xampp\htdocs\mi_proyecto_laravel
 
 	php artisan migrate:install
 *Se creará en nuestra base de datos una tabla migrations
@@ -105,9 +107,37 @@ public function down()
 
 *Algo importante de aclarar es que en Laravel se acostumbra a trabajar con nombre de tablas en plural, aunque se puede romper con esta regla no es recomendable
 
+Sembradora
+----------
+app/database/seeds/
+
+creamos archivo: UserTableSeeder.php
+*tendra este codigo
+/////
+class UserTableSeeder extends Seeder {
+    public function run(){
+        User::create(array(
+            'username'  => 'admin',
+            'email'     => 'admin@admin.com',
+            'name'=> 'Administrator',
+            'password' => Hash::make('admin') // Hash::make() nos va generar una cadena con nuestra contraseña encriptada
+        ));
+    }
+}
+
+para ejecutar la sembradora editamos el archivo:
+- DatabaseSeeder.php
+indicamos a que archivos llamará:
+
+	$this->call('UserTableSeeder');
+
+- En la consola ejecutamos:
+	
+	php artisan db:seed
+
 
 Modelos: Eloquent ORM
----------
+---------------------
 Los modelos son clases que representaban tablas de una base de datos. Además que esa clases tienen métodos que tendrían una suerte de consulta y cada objeto instanciado sería un registro.
 
 -Eloquent es una clase ORM de Laravel.

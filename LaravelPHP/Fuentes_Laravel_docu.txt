@@ -97,6 +97,8 @@ http://bundles.laravel.com/bundle/Fpdf
 https://github.com/markvaneijk/laravel-dompdf/blob/master/dompdf.php
 
 LIBROS:
+--------
+http://wiki.laravel.io/Books
 - Laravel 4 Cookbook
 - Laravel Application Development Cookbook
 - De Aprendiz ao Artisan
