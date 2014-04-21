@@ -32,7 +32,7 @@ Código :
 
 - Por último verificamos la instalación con el siguiente comando.
 
-	#composer
+	composer
 
 *Si la instalación ha terminado correctamente, entonces nos debe aparece una lista de los comandos y opciones que tiene Composer.
 
@@ -67,7 +67,6 @@ Para instalar nuestras migraciones en la base de datos, vamos a abrir la consola
 
 - vamos a crear nuestra primer migración con la tabla: “users”.
 	php artisan migrate:make create_users_table
-
 *podemos visualizarlo en app/database/migrations
 
 Se encuentra una clase con el nombre: “CreateUsersTable” que extienda de otra llamada Migration, y a su vez esta clase tendrá dos métodos definidos, aunque vacíos. El método up() es el que le indicará a nuestra migración qué es lo que tiene que hacer, osea crear la tabla users con sus respectivas columnas. Mientras que el método down() se ejecutará cuando queramos revertir la migración, por ejemplo eliminar la tabla.
