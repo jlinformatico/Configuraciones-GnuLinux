@@ -106,8 +106,8 @@ public function down()
 
 *Algo importante de aclarar es que en Laravel se acostumbra a trabajar con nombre de tablas en plural, aunque se puede romper con esta regla no es recomendable
 
-Sembradora
-----------
+4. Sembradora
+--------------
 app/database/seeds/
 
 creamos archivo: UserTableSeeder.php
@@ -135,8 +135,8 @@ indicamos a que archivos llamará:
 	php artisan db:seed
 
 
-Modelos: Eloquent ORM
----------------------
+5. Modelos: Eloquent ORM
+------------------------
 Los modelos son clases que representaban tablas de una base de datos. Además que esa clases tienen métodos que tendrían una suerte de consulta y cada objeto instanciado sería un registro.
 
 -Eloquent es una clase ORM de Laravel.
@@ -150,13 +150,131 @@ Vamos a crear un modelo para representar la tabla que creamos, la tabla users.
 
 <?php
 class User extends Eloquent {
-	protected $table = 'otro_nombre_para_la_tabla'; //indicar nombre tabla
+	protected $table = 'otro_nombre_para_la_tabla'; //indicar nombre tabla ejm. users
+	//encapsulo campos de esta tabla
+	protected $fillable = array('PK_Usuario', 't_tipo_usuario_id', 't_persona_id','UsuEstado');
 }
 ?>
 
+- Relaciones Eloquent ORM
+-----------------------
+http://codehero.co/laravel-4-desde-cero-eloquent-orm-ii/
 
 
+- Validaciones
+--------------
 
+
+- Funciones en Eloquent (Filtros, Busqueda, Sesiones)
+-----------------------------------------------------
+
+Definimos nuestro modelo Articulo.php:
+
+	class Articulo extends Eloquent {
+
+		public $table = 'articulos';
+
+	}
+
+// Obtener y paginar
+$articulos = Articulo::orderBy('codigoArticulo')->paginate(15);
+
+// Buscar
+$articulos = Articulo::where('codigoArticulo', $codigo)->paginate(15);
+
+// Actualizar
+$articulo = Articulo::where('codigoArticulo', $codigo)->get();
+$articulo->valor = 'otro valor';
+$articulo->valor2 = 'cambio';
+$articulo->save();
+
+// También podrías...
+$articulo->fill(array de datos);
+$articulo->save();
+
+
+Entre otras muchísimas ventajas, hace el código mucho más legible. Imagina por ejemplo que cambias el nombre de la tabla... Tendrás que ir a toda tu aplicación e ir cambiando cada Query Builder... Aquí sin embargo solo tendrías que cambiar la propiedad $table del modelo.
+
+Otra ventaja son las relaciones entre tablas, ofrece una gran potencia. También, Eloquent gestiona automáticamente los timestamps (creado y actualizado) para tus tablas.
+
+
+*Query Builder:
+---------------
+
+	public function listarArticulo() {
+
+        $articulos = DB::table('articulos')
+                ->orderBy('codigoArticulo')
+                ->paginate(15);
+                
+
+        return $articulos;
+    }
+
+    public function buscarArticulo($codigo) {
+
+        $articulo = DB::table('articulos')
+                ->where('codigoArticulo', '=', $codigo)
+                ->paginate(15);
+
+        return $articulo;
+    }
+
+ public function actualizarArticulo($articulo, $codigo) {
+            
+            $result = DB::table('articulos')     
+                    ->where('codigoArticulo', $codigo)
+                    ->update($articulo);
+                    
+                    
+            
+            return $result;
+    }
+
+- Paginación
+----------
+Paginar consiste en seleccionar una cantidad de noticias para mostra en la página y ofrecer enlaces para dirigirse a las noticias anteriores o posteriores a las que estamos viendo. Un ejemplo de esto serían los resultados de búsquedas de Google y los enlaces que hay bajo ellos.
+
+Laravel simplifica mucho la tarea de paginar, ofreciendo una modalidad simple en la que genera solo enlaces de más recientes y más antiguas, y otra más completa al estilo de la de Google.
+
+Para elegir el tipo de paginación que vamos a emplear tenemos que editar el archivo:
+	miproyecto/app/config/view.php
+
+y buscar donde aparece la variable pagination. Para una paginación tipo Google utilizaremos el valor "pagination::slider" mientras que para uno más sencillo con enlace a noticias más nuevas y más antiguas utilizaremos el valor "pagination::simple".
+
+* Cuando queríamos obtener las noticias hacíamos algo así:
+
+	miproyecto/app/controllers/NoticiasController.php
+
+		$noticias = Noticias:all();
+
+Vamos a añadir la paginación y modificar un poco la búsqueda. Así:
+
+    $query = Noticias::orderBy('id','desc');
+    $noticias = $query->paginate(5);
+
+Ya está. Como ves ha sido muy fácil. Ahora lo que tenemos que hacer es incluir los enlaces al final de nuestra vista del blog, que quedará de la siguiente forma:
+
+	miproyecto/app/views/blog.blade.php:
+
+	<div id="pagination">
+		{{$noticias->links()}}
+	</div>
+	@stop
+
+
+*Usando Eloquent :
+------------------
+	$users = User::where('votes', '>', 100)->paginate(15);
+
+Si usas el método all(), puedes sustituirlo por paginate(), ya que el metodo where() solo modifica la forma en la que se realiza la consulta sin regresar resultados y requieren de un metodo adicional para entregar resultados como get(), a diferencia de all() y paginate() que son métodos que si regresan resultad0s
+
+	$users = User::paginate(15);
+
+Y la forma de mostrar los links en la vista es:
+	echo $users->links();
+
+Regresará la tabla con la navegación de la paginación en código html preparado para twitter boostrap.
 
 
 

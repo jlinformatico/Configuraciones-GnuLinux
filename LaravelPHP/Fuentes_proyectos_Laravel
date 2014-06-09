@@ -1,5 +1,36 @@
 LARAVEL PROJECTS
 =================
+
+- Laravel CMS - CRUD Builder - Administrator - CRUD Laravel 4.1
+--------------------------------------------
+http://codecanyon.net/item/laravel-cms-crud-builder-administrator/7194641?ref=WorldWideThemes
+
+http://es.worldwidescripts.net/laravel-crud-admin-52588
+http://mangopik.com/sl/
+
+- Laravel CRUD and CMS LCRUD
+http://mangsoft.blogspot.com/2014/03/create-simple-crud-laravel-41-using.html
+
+- Androcles | Aplicación web para protectoras de animales (excelente) revisado.
+---------------------------------------------------------
+https://www.concursosoftwarelibre.org/1314/proyectos
+http://osluz.unizar.es/cusl
+
+http://androclus.wordpress.com/
+https://github.com/quique/androcles.git
+
+Instalacion:
+    composer install
+    php artisan migrate
+    php artisan migrate --package=cartalyst/sentry
+    php artisan db:seed
+    Copy the folders of the languages you want from the "vendor/caouecs/laravel4-lang" directory to "app/lang".
+
+
+- Plantilla para documentar proyecto libre: 
+http://www.uco.es/aulasoftwarelibre/288-plantilla-para-proyecto-fin-de-carrera/
+http://osl.ull.es/aggregator/sources/15?page=4&%60page%60_=%202
+
 - Crear una aplicación web (blog) en Laravel 4 [l4blog] (excelente)
 -------------------------------------------------------------------
 https://github.com/JaimeMSE/CursoLaravel-AppWeb [REVISADO]
@@ -65,6 +96,9 @@ https://github.com/bstrahija/l4-site-tutorial
 
 TUTORIALES
 -----------
+- http://ayudalaravel.com/
+- http://laravelsnippets.com/snippets/crud-controller
+
 - Building a Customer Management App Using AngularJS and Laravel
 http://code.tutsplus.com/tutorials/building-a-customer-management-app-using-angularjs-and-laravel--net-36444
 - another basic crud on laravel 4
