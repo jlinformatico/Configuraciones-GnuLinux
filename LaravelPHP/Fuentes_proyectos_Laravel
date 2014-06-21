@@ -1,15 +1,52 @@
 LARAVEL PROJECTS
 =================
 
+- CMSs built with LARAVEL
+-------------------------
+	http://maxoffsky.com/code-blog/list-cmss-built-laravel/
+
+	https://github.com/sdebacker/TypiCMS
+	https://github.com/Doptor/Doptor
+
+	http://octobercms.com/
+	https://medium.com/laravel-4/laravel-4-file-based-cms-4bca98a74f4d
+	https://www.digitalocean.com/community/tutorials/how-to-install-octobercms-on-a-vps-running-ubuntu-14-04
+	http://www.dev-metal.com/october-cms-built-top-laravel-beautiful-clever-way-new-1-cms/
+
+	http://wardrobecms.com/
+	https://github.com/wardrobecms/wardrobe
+	http://www.massimilianomarini.com/22/06/2013/how-install-ans-use-wardrobe-cms
+
+
 - Laravel CMS - CRUD Builder - Administrator - CRUD Laravel 4.1
---------------------------------------------
-http://codecanyon.net/item/laravel-cms-crud-builder-administrator/7194641?ref=WorldWideThemes
+---------------------------------------------------------------
+http://codecanyon.net/item/laravel-cms-crud-builder-administrator/7194641
+http://demo.sximobuilder.com/v26/
 
 http://es.worldwidescripts.net/laravel-crud-admin-52588
-http://mangopik.com/sl/
+demo: http://mangopik.com/sl/
 
 - Laravel CRUD and CMS LCRUD
 http://mangsoft.blogspot.com/2014/03/create-simple-crud-laravel-41-using.html
+http://mangsoft.blogspot.com/2014/03/master-detail-laravel-crud-v2.html
+
+- sfCMS (revisandolo)
+https://github.com/sseffa/sf_cms (buenísima apariencia con botstrap)
+
+
+- SoldierCorp/CRUD-en-Laravel-4 [codejobs] - Aprendiendo Laravel_Creación de un CRUD
+--------------------------------------------
+https://github.com/SoldierCorp/CRUD-en-Laravel-4
+*Tutorial:
+https://www.youtube.com/watch?v=XGyf-rnmLp4
+
+
+- Multipurpose Laravel 4 CMS platform and CRUD generator with multilingual support
+----------------------------------------------------------------------------------
+http://thorcms.com
+
+https://github.com/jlinformatico/thorcms
+
 
 - Androcles | Aplicación web para protectoras de animales (excelente) revisado.
 ---------------------------------------------------------
@@ -26,15 +63,32 @@ Instalacion:
     php artisan db:seed
     Copy the folders of the languages you want from the "vendor/caouecs/laravel4-lang" directory to "app/lang".
 
-
 - Plantilla para documentar proyecto libre: 
 http://www.uco.es/aulasoftwarelibre/288-plantilla-para-proyecto-fin-de-carrera/
 http://osl.ull.es/aggregator/sources/15?page=4&%60page%60_=%202
+
 
 - Crear una aplicación web (blog) en Laravel 4 [l4blog] (excelente)
 -------------------------------------------------------------------
 https://github.com/JaimeMSE/CursoLaravel-AppWeb [REVISADO]
 http://www.youtube.com/watch?v=ajiAJf-rT0s&feature=youtu.be
+
+- CMS para protectora de animales
+http://protecms.com/
+https://github.com/JaimeMSE/ProteCMS
+
+
+- Proyectos LARAVEL
+--------------------
+http://withlaravel.com/projects
+
+- Sistema de Inventario desde 0 en Laravel
+http://www.programandoweb.es/creando-un-inventario-desde-0-en-laravel-4/
+http://www.programandoweb.es/creando-un-inventario-desde-0-en-laravel-4-parte-1/
+http://www.programandoweb.es/creando-un-inventario-desde-0-en-laravel-4-parte-2/
+http://www.programandoweb.es/creando-un-inventario-desde-0-en-laravel-4-parte-3/
+
+http://www.programandoweb.es/funciones-utiles-php-obtener-precio-con-iva-precio-sin-iva-y-dar-formato-precio/
 
 - Source code for simple laravel 4 blog tutorial con Foundation 5 (revisar)
 https://github.com/usm4n/laravel-tutorial-codeheaps
@@ -43,7 +97,7 @@ https://github.com/usm4n/laravel-tutorial-codeheaps
 https://github.com/rkosinski/old-blog
 
 - Proyectos variados:
-https://github.com/nestoronald/tienda-laravel
+https://github.com/nestoronald/tienda-laravel - revisado
 
 
 - Laravel 4 Bootstrap Starter Site

@@ -9,12 +9,14 @@ http://cheats.jesse-obrien.ca/
 https://github.com/JesseObrien/laravel-cheatsheet
 
 - TUTORIALES
+------------
 http://codehero.co/series/laravel-4-desde-cero/
 http://codehero.co/laravel-4-desde-cero-estructura-del-proyecto/
 http://www.cristalab.com/tags/laravel/
 http://www.cristalab.com/blog/porque-elegir-laravel-en-vez-de-codeigniter-c111947l/
 
-
+API RESTFULL
+------------
 - http://adrianbarabino.net/2013/05/contruyendo-una-api-restful-en-php-usando-laravel/
 - http://net.tutsplus.com/tutorials/php/laravel-4-a-start-at-a-restful-api/
 
@@ -44,7 +46,6 @@ http://ayudalaravel.com/recursos-para-aprender-laravel
 http://codedog.net/2013/11/22/cooking-with-laravel/
 https://github.com/JeffreyWay/Laravel-Generator
 
-
 https://www.workana.com/projects?query=Laravel
 
 
@@ -56,6 +57,7 @@ laracasts.com
 http://maxoffsky.com/code-blog/integrating-facebook-login-into-laravel-application/
 
 COMUNIDADES.
+------------
 http://www.laravel.com.br/hangout-laravel-brasil-7/
 http://laraveles.com/foro/
 http://net.tutsplus.com/tag/laravel/
