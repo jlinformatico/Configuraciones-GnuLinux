@@ -177,7 +177,7 @@ Definimos nuestro modelo Articulo.php:
 	}
 
 // Obtener y paginar
-$articulos = Articulo::orderBy('codigoArticulo')->paginate(15);
+$articulos = Articulo::orderBy('codigoArticulo','desc')->paginate(15);
 
 // Buscar
 $articulos = Articulo::where('codigoArticulo', $codigo)->paginate(15);

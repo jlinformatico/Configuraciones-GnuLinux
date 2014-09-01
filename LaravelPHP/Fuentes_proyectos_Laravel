@@ -1,5 +1,17 @@
 LARAVEL PROJECTS
 =================
+- LARAVEL API REST (Creando Apis con Laravel - Excelente)
+------------------
+https://github.com/j0an/LaravelMeetupApiDemo
+http://www.meetup.com/Laravel-Buenos-Aires/events/174574162/
+Canal: https://www.youtube.com/user/laravelba
+
+- Demo API built on Laravel 4 for my Laracon 2013
+https://github.com/akuzemchak/laracon-todo-api
+
+- Laravel API Demo
+https://github.com/GastonHeim/laravel-api-demo
+
 
 - CMSs built with LARAVEL
 -------------------------
@@ -18,6 +30,12 @@ LARAVEL PROJECTS
 	http://www.massimilianomarini.com/22/06/2013/how-install-ans-use-wardrobe-cms
 
 
+- LARAVEL ADMINISTRATOR
+------------------------
+http://administrator.frozennode.com/
+https://github.com/FrozenNode/Laravel-Administrator
+
+
 - Laravel CMS - CRUD Builder - Administrator - CRUD Laravel 4.1
 ---------------------------------------------------------------
 http://codecanyon.net/item/laravel-cms-crud-builder-administrator/7194641
@@ -33,6 +51,15 @@ http://mangsoft.blogspot.com/2014/03/master-detail-laravel-crud-v2.html
 - sfCMS (revisandolo)
 https://github.com/sseffa/sf_cms (buenísima apariencia con botstrap)
 
+- CRUD Laravel Angularjs y JSON (EXCLENTE Revisar)
+http://gastonheim.blogspot.com/2014/03/crud-de-recursos-con-laravel-y-angularjs.html
+
+- A Laravel 4.1 Bootstrap CMS [EXCELENTE]
+-----------------------------------------
+A Laravel 4, Bootstrap 3 CMS Built With SOLID Principles In Mind
+- Get Started With Laravel Bootstrap (Laravel 4.1) 
+http://www.youtube.com/watch?v=G0FQfUy3TGg
+https://github.com/davzie/laravel-bootstrap
 
 - SoldierCorp/CRUD-en-Laravel-4 [codejobs] - Aprendiendo Laravel_Creación de un CRUD
 --------------------------------------------
@@ -114,6 +141,7 @@ https://github.com/58bits/laravel-4-bootstrap-3-starter
 --------------------------------------------------------
 
 http://scotch.io/series/simple-laravel
+
 - Simple Laravel CRUD with Resource Controllers [excelente tutorial]
 ------------------------------------------------
 http://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers
@@ -132,14 +160,6 @@ Installation
 4.Migrate your database: php artisan migrate
 5.Seed your database: php artisan db:seed
 6.View your application in browser port 8000: php artisan serve
-
-
-- A Laravel 4.1 Bootstrap CMS [EXCELENTE]
-------------------------------
-A Laravel 4, Bootstrap 3 CMS Built With SOLID Principles In Mind
-- Get Started With Laravel Bootstrap (Laravel 4.1) 
-http://www.youtube.com/watch?v=G0FQfUy3TGg
-https://github.com/davzie/laravel-bootstrap
 
 
 - Laravel 4 Site Tutorial [TUTORIAL]
