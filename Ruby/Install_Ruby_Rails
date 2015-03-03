@@ -1,0 +1,113 @@
+RUBY ON RAILS
+-------------
+I. Conceptos claves
+
+RUBY: Es un lenguaje de programcacion orientado totalmente a objetos.
+RVM: Es controlador de versiones de ruby. 
+RAILS: Es un framework para ruby, en esta plataforma puedes desarrollar sistemas web agiles.
+
+Referencias:
+https://rvm.io/
+
+II. Instalación rvm
+
+    1.Actualizar el sistema
+	Archlinux
+		sudo pacman -Syu
+	Ubuntu
+		sudo apt-get update
+
+    2.Instalar git
+	Archlinux
+		sudo pacman -git
+	Ubuntu
+		sudo apt-get install git
+
+    3.Descargar y ejecutar RVM: https://rvm.io/rvm/install
+		
+		$ \curl -sSL https://get.rvm.io | bash -s stable
+
+    4.Agregue código al código fuente de algunos init a su bashrc. (cambiar $HOME)
+	echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
+
+		Ejemplo:
+		echo '[[ -s "/home/host/.rvm/scripts/rvm" ]] && source "/home/host/.rvm/scripts/rvm"' >> ~/.bashrc
+
+		- Asegurar el cambio de host
+		source ~/.bashrc
+
+		- Para testear:
+		type rvm | head -1
+
+    5.Añada el directorio bin a su PATH:
+	export PATH =$HOME/.rvm/bin: $PATH' echo. >> ~/bashrc
+
+    6.Verificar la instalación correcta
+	rvm -v			#Verifica la version
+	
+III.Instalación de ruby
+
+	rvm install 2.0.0	#Esta la ultima version estable 2013,para instalar futuras versione,busca el pagina oficial la estable.
+
+	rvm use --default 2.0.0 #Establecer la version de ruby por defecto.
+
+IV. Instalación de rails
+	gem install rails	#Instala la gema del framework
+	
+V. Crear primer proyecto base
+	rails new proyectoapp
+
+V.  Instalación de gemas: https://rubygems.org/
+	
+	- Agregar en el archivo gemfile de mi proyecto
+	 gem 'execjs' 	#Estas gemas sirven para correr aplicaciones javascript.
+	 gem 'therubyracer'	#Agregado para javascript.	
+
+	#instalaciones opcionales
+	 rvm rubygems latest	#Instala la gemas disponible y actuales.
+	 rvm rubygems current	#Instala las gemas necesarias para rails.
+		//mejor instalo nodejs para evitar execjs y therubyracer
+	 gem install execjs 	#Estas gemas sirven para correr aplicaciones javascript.
+	 gem therubyracer	#Agregado para javascript.
+
+	- Ejecutar dentro de nuestro proyecto en la terminal:
+	 bundle install #instala todas las gemas que requiere el proyecto
+
+	- Ejecutar en el servidor:
+	rails s
+	http://localhost:3000
+
+VI. Instalar nodejs (opcional)
+	1. Update system
+		sudo apt-get update
+
+	2. Install Node.js
+	sudo pacman -S nodejs	#Es sumamente necesario para la gestion de rails
+	sudo apt-get install nodejs
+
+	node -v
+
+	3.Install NPM: Manejador de paquetes de Node.js
+	Simply run the NPM install script:
+		sudo apt-get install npm
+
+		curl https://npmjs.org/install.sh | sudo sh
+
+	And then check it works:
+		npm -v
+
+	# Para instalar nodejs
+	sudo apt-get install nodejs nodejs-dev npm
+
+VII.Agregados opcionales
+	rvm get head	#Actualizar rvm
+	
+	Tambien puedes instalar todo con esta linea
+	curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby
+
+VIII.Bibliografia
+		http://tanghus.net/2012/11/installing-ruby-rvm-on-ubuntu-12-10/
+		https://wiki.archlinux.org/index.php/RVM
+		https://rvm.io/rvm/install/
+		https://www.digitalocean.com/community/articles/how-to-install-ruby-on-rails-on-arch-linux-with-rvm
+		http://www.rosehosting.com/blog/install-ruby-sass-and-compass/

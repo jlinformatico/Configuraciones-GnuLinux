@@ -35,6 +35,15 @@ https://github.com/GastonHeim/laravel-api-demo
 http://administrator.frozennode.com/
 https://github.com/FrozenNode/Laravel-Administrator
 
+- Laravel 4.2
+-------------
+Basic auth actions with Laravel 4.2 
+https://github.com/dimitriacosta/laravel-login
+
+
+- Laravel Token Auth
+http://pacuna88.wordpress.com/2014/05/14/autenticacion-mediante-token-en-laravel-4/
+
 
 - Laravel CMS - CRUD Builder - Administrator - CRUD Laravel 4.1
 ---------------------------------------------------------------
