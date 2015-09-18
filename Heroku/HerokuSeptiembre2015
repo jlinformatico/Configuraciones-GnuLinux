@@ -1,0 +1,229 @@
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku pg:psql --app redaventura HEROKU_POSTGRESQL_BRONZE
+heroku: command not found
+
+[127]hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ sudo apt-get install wget
+[sudo] password for hector: 
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+wget is already the newest version.
+Los paquetes indicados a continuación se instalaron de forma automática y ya no son necesarios.
+  libgsoap3 libvncserver0
+Use 'apt-get autoremove' to remove them.
+0 actualizados, 0 se instalarán, 0 para eliminar y 5 no actualizados.
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+--2015-09-17 19:28:41--  https://toolbelt.heroku.com/install-ubuntu.sh
+Resolviendo toolbelt.heroku.com (toolbelt.heroku.com)... 50.16.201.10, 50.17.186.197, 54.243.32.171
+Conectando con toolbelt.heroku.com (toolbelt.heroku.com)[50.16.201.10]:443... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 610 [text/plain]
+Grabando a: “STDOUT”
+
+100%[==============================================================================================================================>] 610         --.-K/s   en 0s      
+
+2015-09-17 19:28:42 (16,6 MB/s) - escritos a stdout [610/610]
+
+This script requires superuser access to install apt packages.
+You will be prompted for your password by sudo.
+[sudo] password for hector: 
+--2015-09-17 19:28:46--  https://toolbelt.heroku.com/apt/release.key
+Resolviendo toolbelt.heroku.com (toolbelt.heroku.com)... 50.17.186.197, 50.16.201.10, 54.243.32.171
+Conectando con toolbelt.heroku.com (toolbelt.heroku.com)[50.17.186.197]:443... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 1737 (1,7K) [application/octet-stream]
+Grabando a: “STDOUT”
+
+100%[==============================================================================================================================>] 1.737       --.-K/s   en 0s      
+
+2015-09-17 19:28:47 (45,9 MB/s) - escritos a stdout [1737/1737]
+
+OK
+
+Descargados 120 kB en 15seg. (7.574 B/s)
+Leyendo lista de paquetes... Hecho
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Los paquetes indicados a continuación se instalaron de forma automática y ya no son necesarios.
+  libgsoap3 libvncserver0
+Use 'apt-get autoremove' to remove them.
+Se instalarán los siguientes paquetes extras:
+  heroku
+Se instalarán los siguientes paquetes NUEVOS:
+  heroku heroku-toolbelt
+0 actualizados, 2 se instalarán, 0 para eliminar y 5 no actualizados.
+Necesito descargar 1.831 kB de archivos.
+Se utilizarán 0 B de espacio de disco adicional después de esta operación.
+Des:1 http://toolbelt.heroku.com/ubuntu/ ./ heroku 3.41.5 [1.830 kB]
+Des:2 http://toolbelt.heroku.com/ubuntu/ ./ heroku-toolbelt 3.41.5 [666 B]
+Descargados 1.831 kB en 5seg. (322 kB/s)
+Seleccionando el paquete heroku previamente no seleccionado.
+(Leyendo la base de datos ... 154233 ficheros o directorios instalados actualmente.)
+Desempaquetando heroku (de .../archives/heroku_3.41.5_all.deb) ...
+Seleccionando el paquete heroku-toolbelt previamente no seleccionado.
+Desempaquetando heroku-toolbelt (de .../heroku-toolbelt_3.41.5_all.deb) ...
+Configurando heroku (3.41.5) ...
+Configurando heroku-toolbelt (3.41.5) ...
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku login
+Enter your Heroku credentials.
+Email: hector.rz11@gmail.com
+Password (typing will be hidden): 
+ !    Unable to connect to Heroku API, please check internet connectivity and try again.
+
+[1]hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ sudo heroku login
+Enter your Heroku credentials.
+Email: hector.rz11@gmail.com
+Password (typing will be hidden): 
+ !    Unable to connect to Heroku API, please check internet connectivity and try again.
+
+[1]hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku --version
+heroku-toolbelt/3.41.5 (i486-linux) ruby/1.9.3
+You have no installed plugins.
+ !    Heroku client internal error.
+ !    Search for help at: https://help.heroku.com
+ !    Or report a bug at: https://github.com/heroku/heroku/issues/new
+
+    Error:       getaddrinfo: Name or service not known (SocketError) (Excon::Errors::SocketError)
+    Command:     heroku --version
+    Version:     heroku-toolbelt/3.41.5 (i486-linux) ruby/1.9.3
+    Error ID:    b84e64491e2f450db6404e269eaec08b
+
+
+    More information in /home/hector/.heroku/error.log
+
+--- Lo Correcto seria usar lo siguiente ---
+
+[1]hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ wget -O- https://toolbelt.heroku.com/install.sh | sh
+--2015-09-17 19:32:47--  https://toolbelt.heroku.com/install.sh
+Resolviendo toolbelt.heroku.com (toolbelt.heroku.com)... 54.243.32.171, 50.17.186.197, 50.16.201.10
+Conectando con toolbelt.heroku.com (toolbelt.heroku.com)[54.243.32.171]:443... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 975 [text/plain]
+Grabando a: “STDOUT”
+
+100%[==============================================================================================================================>] 975         --.-K/s   en 0s      
+
+2015-09-17 19:32:48 (24,5 MB/s) - escritos a stdout [975/975]
+
+This script requires superuser access to install software.
+You will be prompted for your password by sudo.
+[sudo] password for hector: 
+Add the Heroku CLI to your PATH using:
+$ echo 'PATH="/usr/local/heroku/bin:$PATH"' >> ~/.profile
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku --version
+heroku-toolbelt/3.41.5 (i486-linux) ruby/1.9.3
+You have no installed plugins.
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ sudo apt-get install heroku-toolbelt
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+heroku-toolbelt is already the newest version.
+Los paquetes indicados a continuación se instalaron de forma automática y ya no son necesarios.
+  libgsoap3 libvncserver0
+Use 'apt-get autoremove' to remove them.
+0 actualizados, 0 se instalarán, 0 para eliminar y 5 no actualizados.
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ sudo apt-get autoremove libgsoap3
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Los siguientes paquetes se ELIMINARÁN:
+  libgsoap3 libvncserver0
+0 actualizados, 0 se instalarán, 2 para eliminar y 5 no actualizados.
+Se liberarán 1.757 kB después de esta operación.
+¿Desea continuar? [S/n] s
+(Leyendo la base de datos ... 155369 ficheros o directorios instalados actualmente.)
+Desinstalando libgsoap3:i386 ...
+Desinstalando libvncserver0:i386 ...
+Procesando disparadores para libc-bin ...
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ sudo apt-get install heroku-toolbelt
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+heroku-toolbelt is already the newest version.
+0 actualizados, 0 se instalarán, 0 para eliminar y 5 no actualizados.
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku --version
+heroku-toolbelt/3.41.5 (i486-linux) ruby/1.9.3
+You have no installed plugins.
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku plugins:install heroku-fork
+Installing Heroku Toolbelt v4... done
+Setting up iojs-v3.2.0... done
+Installing core plugins heroku-apps, heroku-fork, heroku-git, heroku-local, heroku-run, heroku-status... done
+Installing plugin heroku-fork... done
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku --version
+heroku-toolbelt/3.41.5 (i486-linux) ruby/1.9.3
+heroku-cli/4.22.5-d0b5ec7 (386-linux) go1.5.1
+=== Installed Plugins
+heroku-apps@0.2.1
+heroku-fork@3.1.4
+heroku-git@2.4.1
+heroku-local@4.0.2
+heroku-run@2.5.3
+heroku-status@1.2.1
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku login
+Enter your Heroku credentials.
+Email: hector.rz11@gmail.com
+Password (typing will be hidden): 
+Authentication successful.
+
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku pg:psql --app redaventura HEROKU_POSTGRESQL_BRONZE
+ !    Unable to connect to Heroku API, please check internet connectivity and try again.
+
+[1]hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ sudo heroku pg:psql --app redaventura HEROKU_POSTGRESQL_BRONZE
+Enter your Heroku credentials.
+Email: hector.rz11@gmail.com
+Password (typing will be hidden): 
+ !    Unable to connect to Heroku API, please check internet connectivity and try again.
+
+[1]hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ sudo heroku pg:psql --app redaventura HEROKU_POSTGRESQL_BRONZE
+Enter your Heroku credentials.
+Email: hector.rz11@gmail.com
+Password (typing will be hidden): 
+---> Connecting to HEROKU_POSTGRESQL_BRONZE_URL (DATABASE_URL)
+psql (9.3.1, servidor 9.3.9)
+conexión SSL (cifrado: DHE-RSA-AES256-SHA, bits: 256)
+Digite «help» para obtener ayuda.
+
+redaventura::BRONZE=> \t
+Mostrando sólo filas.
+redaventura::BRONZE=> \d
+ public  | activities        | tabla     | gfiwnipijccgkk
+ public  | activities_id_seq | secuencia | gfiwnipijccgkk
+ public  | albums            | tabla     | gfiwnipijccgkk
+ public  | albums_activities | tabla     | gfiwnipijccgkk
+ public  | albums_id_seq     | secuencia | gfiwnipijccgkk
+ public  | comments          | tabla     | gfiwnipijccgkk
+ public  | comments_id_seq   | secuencia | gfiwnipijccgkk
+ public  | migrations        | tabla     | gfiwnipijccgkk
+ public  | photos            | tabla     | gfiwnipijccgkk
+ public  | photos_id_seq     | secuencia | gfiwnipijccgkk
+ public  | users             | tabla     | gfiwnipijccgkk
+ public  | users_id_seq      | secuencia | gfiwnipijccgkk
+
+redaventura::BRONZE=> \q
+hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ heroku pg:psql --app redaventuramvp HEROKU_POSTGRESQL_VIOLET
+---> Connecting to HEROKU_POSTGRESQL_VIOLET_URL
+psql (9.3.1, servidor 9.4.2)
+ADVERTENCIA: psql versión 9.3, servidor versión 9.4.
+          Algunas características de psql podrían no funcionar.
+conexión SSL (cifrado: ECDHE-RSA-AES256-SHA, bits: 256)
+Digite «help» para obtener ayuda.
+
+redaventuramvp::VIOLET=> \d
+redaventuramvp::VIOLET=> select * from users;
+redaventuramvp::VIOLET=> select id,first_name,last_name from users;
+redaventuramvp::VIOLET=> select id,first_name,last_name,email from users order by id DESC;
+redaventuramvp::VIOLET=> select * from users order by id DESC;
+redaventuramvp::VIOLET=> select id,first_name,last_name,email from users order by id DESC;
+
+redaventuramvp::VIOLET=> \q
+
+[130]hector@hector /opt/lampp/htdocs/laravel/laravel_sistema_art $ cd 
